@@ -139,7 +139,7 @@ double Adafruit_MAX31855::readCelsius(void) {
     v = 0xFFFFC000 | ((v >> 18) & 0x00003FFF);
   } else {
     // Positive value, just drop the lower 18 bits.
-    v >>= 18;
+    v >> 18;
   }
   // Serial.println(v, HEX);
 
